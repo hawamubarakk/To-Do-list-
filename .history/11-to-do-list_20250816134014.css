@@ -61,7 +61,7 @@ h1 {
 }
 
 .todo-row {
-  display: contents; 
+  display: contents; /* grid layout follow karega */
 }
 
 .completed {
