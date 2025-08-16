@@ -43,19 +43,3 @@ body {
 .todo-row {
   display: contents; /* Allows children to follow the .todo-grid layout */
 }
-
-.completed {
-  text-decoration: line-through;
-  color: gray;
-}
-button {
-  background: green;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-button:hover {
-  background: darkgreen;
-}
