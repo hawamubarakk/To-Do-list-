@@ -1,37 +1,25 @@
-/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   background: #f8f9fa;
   margin: 40px;
-  display: flex;
   justify-content: center;
   align-items: flex-start;
+  display: flex;
 }
 
-/* Heading */
 h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Main Container */
-.todo-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 400px;
-}
-
-/* Input and Task Grid */
 .todo-grid,
 .todo-input-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr auto; 
   gap: 10px;
-  margin-bottom: 10px;
 }
+
 
 .name-input,
 .due-date-input {
@@ -41,38 +29,36 @@ h1 {
   border-radius: 5px;
 }
 
-/* Buttons */
-.add-todo-button,
-.delete-todo-button {
+.add-todo-button {
+  background-color: green;
+  color: white;
   border: none;
   font-size: 15px;
   cursor: pointer;
   border-radius: 5px;
   padding: 8px 15px;
-  color: #fff;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.add-todo-button {
-  background-color: green;
 }
 
 .add-todo-button:hover {
   background-color: darkgreen;
-  transform: scale(1.05);
 }
 
 .delete-todo-button {
   background-color: darkred;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 8px 15px;
 }
 
 .delete-todo-button:hover {
   background-color: crimson;
-  transform: scale(1.05);
 }
 
-/* Task Rows */
 .todo-row {
-  display: contents;
+  display: contents; 
 }
 
 .completed {
@@ -80,15 +66,31 @@ h1 {
   color: gray;
 }
 
-/* Responsive Design */
+.todo-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 400px;
+}
+
 @media (max-width: 500px) {
   .todo-grid,
   .todo-input-grid {
     grid-template-columns: 1fr;
   }
-
   .add-todo-button,
   .delete-todo-button {
     width: 100%;
   }
 }
+
+.add-todo-button,
+.delete-todo-button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.add-todo-button:hover,
+.delete-todo-button:hover {
+  transform: scale(1.05);
+}
+
